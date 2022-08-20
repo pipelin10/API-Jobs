@@ -3,11 +3,11 @@ const {faker} = require('@faker-js/faker')
 const boom = require('@hapi/boom')
 const sgMail = require('@sendgrid/mail')
 
-const accountSid = 'AC4d82b3bdb56096def48fb82d350917f6';
-const authToken = '922605f506eaac2c34100ae5d05dd032';
+const accountSid = '';
+const authToken = '';
 const clientTwilio = require('twilio')(accountSid, authToken);
 
-sgMail.setApiKey('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')
+sgMail.setApiKey('')
 
 class People{
   constructor(){
