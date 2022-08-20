@@ -3,17 +3,20 @@ const {faker} = require('@faker-js/faker')
 const boom = require('@hapi/boom')
 const sgMail = require('@sendgrid/mail')
 
-const accountSid = '';
-const authToken = '';
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
 const clientTwilio = require('twilio')(accountSid, authToken);
 
-sgMail.setApiKey('')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+
+aws.config.region = process.env.REGION
+const ddbTable =  process.env.PEOPLE_TABLE;
 
 class People{
   constructor(){
     this.dynamoDB = new aws.DynamoDB()
     this.docClient = new aws.DynamoDB.DocumentClient()
-    this.tableName = 'People'
+    this.tableName = ddbTable
   }
 
   async find(){

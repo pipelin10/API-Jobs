@@ -2,16 +2,15 @@ const aws = require('aws-sdk')
 const {faker} = require('@faker-js/faker')
 const boom = require('@hapi/boom');
 
-aws.config.update({
-  region: "eu-west-2",
-  endpoint: "http://localhost:8000"
-});
+aws.config.region = process.env.REGION
+
+const ddbTable =  process.env.JOB_TABLE;
 
 class Jobs{
   constructor(){
     this.dynamoDB = new aws.DynamoDB()
     this.docClient = new aws.DynamoDB.DocumentClient()
-    this.tableName = 'Jobs'
+    this.tableName = ddbTable
   }
 
   async find(){

@@ -12,9 +12,11 @@
         "@hapi/boom": "^10.0.0",
         "@sendgrid/mail": "^7.7.0",
         "aws-sdk": "^2.1199.0",
+        "body-parser": "^1.20.0",
         "cors": "^2.8.5",
         "express": "^4.18.1",
         "joi": "^17.6.0",
+        "tsc": "^2.0.4",
         "twilio": "^3.80.1"
       },
       "devDependencies": {
@@ -3005,6 +3007,14 @@
         "nodetouch": "bin/nodetouch.js"
       }
     },
+    "node_modules/tsc": {
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/tsc/-/tsc-2.0.4.tgz",
+      "integrity": "sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q==",
+      "bin": {
+        "tsc": "bin/tsc"
+      }
+    },
     "node_modules/twilio": {
       "version": "3.80.1",
       "resolved": "https://registry.npmjs.org/twilio/-/twilio-3.80.1.tgz",
@@ -5463,6 +5473,11 @@
       "requires": {
         "nopt": "~1.0.10"
       }
+    },
+    "tsc": {
+      "version": "2.0.4",
+      "resolved": "https://registry.npmjs.org/tsc/-/tsc-2.0.4.tgz",
+      "integrity": "sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q=="
     },
     "twilio": {
       "version": "3.80.1",
